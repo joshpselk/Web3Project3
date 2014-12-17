@@ -1,0 +1,58 @@
+html{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+#topRight {
+    text-align: right; 
+    margin: 0.5em 0.5em 0 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400%;
+    font-weight: bold;
+    margin: 0.5em 0 1em 0;
+}
+
+#mainContent {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search {
+  
+}
+
+#show {
+   float: right;
+    margin: 0 0 0.5em 0;
+}
+
+#Sform {
+  float:left;  
+}
+
+table {
+    width: 100%;
+     background-color: #72a0c1; 
+}
+
+th {
+    color:#fff;
+    background-color: #0f4d92;
+    padding:0.4em;
+}
+
+tr:nth-child(odd){
+     background-color: #5d8aa8;  
+}
+
+tr:nth-child(even){
+     
+}
+
+td {
+    text-align: center;
+    padding: 0.3em;
+    border-bottom:
+}
