@@ -19,8 +19,8 @@ h1 {
     margin-right: auto;
 }
 
-#search {
-  
+#update {
+  float: right;
 }
 
 #show {
@@ -55,4 +55,8 @@ td {
     text-align: center;
     padding: 0.3em;
     border-bottom:
+}
+
+#totalAmount {
+  float: right;
 }

@@ -21,6 +21,7 @@
                 }
             }
 </script>
+        <meta name="robots" content="noindex,nofollow">
 	</head>
     <body>
          <?php
@@ -34,8 +35,7 @@
             }
         ?>
         <div id="topRight">
-            <h5><a href="createSign.php">Create Account</a></h5>
-            <h5><a href="createSign.php">Sign-in</a></h5>
+            <h5><a href="cart.php">Cart</a></h5>
         </div>
         <h1>Blue Pinapple Music</h1>
         <div id="mainContent">
@@ -61,7 +61,11 @@
                             <th>Title</th>
                             <th>Artist</th>
                             <th>Album</th>
+                            <th>Format</th>
+                            <th>Description</th>
                             <th>Price</th>
+                            <th>Quantity Aval.</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,13 +86,34 @@
                             $title = $row['title'];
                             $artist = $row['artist'];
                             $album = $row['album'];
+                            $format = $row['format'];
+                            $description = $row['description'];
                             $price = $row['price'];
+                            $quantity = $row['quantity'];
 
                             echo "<tr>";
                             echo "<td>" . $title . "</td>";
                             echo "<td>" .  $artist . "</td>";
                             echo "<td>" . $album . "</td>";
-                            echo "<td>$" . $price . "</td>";
+                            echo "<td>" . $format . "</td>";
+                            echo "<td>" . $description . "</td>";
+                            echo "<td>" . $price . "</td>";
+                            echo "<td>" . $quantity . "</td>";
+                            ?>
+                            <td>
+                                <form method="get" action="toCart.php" style="display=none">
+                                    <input type='hidden' name='id' value="<?php echo $theid;?>">
+                                    <input type='hidden' name='title' value="<?php echo $title;?>">
+                                    <input type='hidden' name='artist' value="<?php echo $artist;?>">
+                                    <input type='hidden' name='album' value="<?php echo $album;?>">
+                                    <input type='hidden' name='format' value="<?php echo $format;?>">
+                                    <input type='hidden' name='description' value="<?php echo $description;?>">
+                                    <input type='hidden' name='price' value="<?php echo $price;?>">
+                                    <input type='hidden' name='quantity' value="<?php echo $quantity;?>">
+                                    <input type='submit' name='add' value='Add to Cart'>
+                                </form>
+                            </td>
+                        <?php
                             echo "</tr>";
                         }
                     } else {
@@ -102,14 +127,37 @@
                             $title = $row['title'];
                             $artist = $row['artist'];
                             $album = $row['album'];
+                            $format = $row['format'];
+                            $description = $row['description'];
                             $price = $row['price'];
+                            $quantity = $row['quantity'];
 
                             echo "<tr>";
                             echo "<td>" . $title . "</td>";
                             echo "<td>" .  $artist . "</td>";
                             echo "<td>" . $album . "</td>";
-                            echo "<td>$" . $price . "</td>";
+                            echo "<td>" . $format . "</td>";
+                            echo "<td>" . $description . "</td>";
+                            echo "<td>" . $price . "</td>";
+                            echo "<td>" . $quantity . "</td>";
+    
+                            ?>
+                             <td>
+                                <form method="get" action="toCart.php" style="display=none">
+                                    <input type='hidden' name='id' value="<?php echo $theid;?>">
+                                    <input type='hidden' name='title' value="<?php echo $title;?>">
+                                    <input type='hidden' name='artist' value="<?php echo $artist;?>">
+                                    <input type='hidden' name='album' value="<?php echo $album;?>">
+                                    <input type='hidden' name='format' value="<?php echo $format;?>">
+                                    <input type='hidden' name='description' value="<?php echo $description;?>">
+                                    <input type='hidden' name='price' value="<?php echo $price;?>">
+                                    <input type='hidden' name='quantity' value="<?php echo $quantity;?>">
+                                    <input type='submit' name='submit' value='Add to Cart'>
+                                </form>
+                            </td>
+                        <?php
                             echo "</tr>";
+                        
                         }
                     }
                 ?>
