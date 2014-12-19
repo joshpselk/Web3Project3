@@ -14,19 +14,24 @@
     {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    if(isset($_GET['submit']))
-    {
+
+        $theid = $_GET['id'];
         $title = $_GET['title'];
         $artist = $_GET['artist'];
         $album = $_GET['album'];
         $format = $_GET['format'];
         $description = $_GET['description'];
         $price = $_GET['price'];
-        $quantity = $_GET['quantity'];
+        $quantity = $_GET['qutyPurchase'];
+        $option=$_GET['option'];
         
-        $sql_insert = "INSERT INTO `cart`(`id`, `title`, `artist`, `album`, `format`, `description`, `price`, `quantity`, `qutyPurchase`) VALUES ('','$title','$artist','$album','$format','$description','$price','$quantity','1')";
-        mysqli_query($connect, $sql_insert);
-    }
-    header("Location:index.php");
+        echo $theid . $title . $artist . $album . $format . $description . $price . $quantity . $option;
+        
+        $sql_delete = "DELETE FROM cart WHERE id='$theid'";
+        
+       mysqli_query($connect, $sql_delete);
+    
+    header("Location:cart.php");
 ?>
+    
 </html>

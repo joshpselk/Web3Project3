@@ -1,5 +1,7 @@
 html{
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #474747;
+    color:#fff;
 }
 #topRight {
     text-align: right; 
@@ -13,8 +15,43 @@ h1 {
     margin: 0.5em 0 1em 0;
 }
 
+h2 {
+    font-size: 200%;
+    font-weight:bold;
+    text-align: center;
+    margin: 1em 0 1.5em 0;
+    padding: 0.5em 0 0 0;
+}
+#shippingMethod h2 {
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0 0 4em 0;
+}
+
+#shippingMethod h4 {
+    font-weight: bold;
+    margin: 0 0 5em 0;
+}
+
+#shippingMethod {
+    text-align: center;
+    width:18%;
+    background-color:#72a0c1;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    color:#fff;
+    border-radius:10px;
+    float:left;
+    margin: 0 2.5% 0 2.5%;
+}
+
 #mainContent {
     width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainStuff {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -59,4 +96,55 @@ td {
 
 #totalAmount {
   float: right;
+}
+
+#finalTotal {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #72a0c1;
+    border-radius: 10px;
+}
+
+#finalTotal p {
+    margin: 0.5em 0 0.5em 0;
+    padding: 0 0.5em 0.5em 0.5em;
+}
+
+#cost {
+    float:right;
+}
+
+#message {
+    width:25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a:link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* mouse over link */
+a:hover {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* selected link */
+a:active {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }

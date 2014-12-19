@@ -34,10 +34,13 @@
                             <th>Description</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                 <?php
+                
+                    
                     $sql_select = "SELECT * FROM `cart`";
                     
                     $result = mysqli_query($connect, $sql_select);
@@ -90,20 +93,31 @@
                             <input type='hidden' name='itemTotal' value="<?php $iTotal=$price*$quantity; echo $iTotal;?>">
                             <!--Totals up every loop to continue to update the price-->
                             <input type='hidden' name='total' value="<?php $totalAmount = $totalAmount + $iTotal; echo $totalAmount?>">
-                            <input id="update" type="submit" name="submit" value="Update">
+                            <div>
+                                <input id="update" type="submit" name="submit" value="Update">
+                                <button type="submit" formaction="delete.php">Delete</button>
+                            </div>
                         </form>
                     <?php
-                            echo "</td>";
-    
-                    ?>
-                    <?php
-                        echo "</tr>";
+                        echo "</td>";
+                     echo "</tr>";
                     }
                     ?>
                     </tbody>
                 </table>
-                <div id="totalAmount">
-                <p>Total Cost of Items:<?php echo " " . $totalAmount; ?></p>
+                <?php
+                    
+                    
+                ?>
+                        <div id="totalAmount">
+                        <p>Total Cost of Items:<?php echo " " . $totalAmount; ?></p>
+                        <form action="shipping.php">
+                            <input type='hidden' name='total' value="<?php echo $totalAmount;?>">
+                            <input style="float:right;" type="submit" name="submit" value="Continue">
+                        </form>
+                <?php
+                    
+                ?>
                 </div>
             </div>
         </div>

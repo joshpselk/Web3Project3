@@ -1,3 +1,11 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Blue Pinapple Music</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta name="robots" content="noindex,nofollow">
+	</head>
 <?php
     $connect = Mysqli_connect('localhost','root','','web3pro3');
 
@@ -25,3 +33,4 @@
     }
     header("Location:cart.php");
 ?>
+</html>
